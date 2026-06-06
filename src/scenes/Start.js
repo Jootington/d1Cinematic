@@ -22,7 +22,7 @@ export class Start extends Phaser.Scene {
             0, bigTriangleHeight,
             bigTriangleWidth, bigTriangleHeight,
             bigTriangleWidth / 2, 0,
-            0xffffff
+            0xffb85c
         );
 
         const smallTriangleWidth = w * 0.3;
@@ -33,7 +33,7 @@ export class Start extends Phaser.Scene {
             0, 0,
             smallTriangleWidth, 0,
             smallTriangleWidth / 2, smallTriangleHeight,
-            0x690000
+            0xffb494
         );
 
         const logo = this.add.image(w / 2, h / 2 - 70, 'studioLogo')
@@ -43,7 +43,7 @@ export class Start extends Phaser.Scene {
         const studioText = this.add.text(w / 2, h / 2 + 270, 'Mog Studios', {
             fontFamily: 'Brush Script MT',
             fontSize: '48px',
-            color: '#690000',
+            color: '#000000',
             fontStyle: 'bold'
         })
             .setOrigin(0.5)

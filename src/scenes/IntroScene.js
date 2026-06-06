@@ -92,7 +92,7 @@ playUukiAtemyFlask() {
                 this.tweens.add({
                     targets: video,
                     alpha: 0,
-                    duration: 500,
+                    duration: 1500,
                     onComplete: () => {
                         video.destroy();
                         this.showGrowingImage();
@@ -115,8 +115,8 @@ playUukiAtemyFlask() {
 
         this.tweens.add({
             targets: eatenFlask,
-            scale: 3,
-            duration: 3500,
+            scale: 1,
+            duration: 4500,
             ease: 'Sine.easeInOut',
             onComplete: () => {
                 this.tweens.add({
