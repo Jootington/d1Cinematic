@@ -41,7 +41,7 @@ export class Start extends Phaser.Scene {
             .setScale(0.5);
 
         const studioText = this.add.text(w / 2, h / 2 + 270, 'Mog Studios', {
-            fontFamily: 'Arial',
+            fontFamily: 'Brush Script MT',
             fontSize: '48px',
             color: '#690000',
             fontStyle: 'bold'

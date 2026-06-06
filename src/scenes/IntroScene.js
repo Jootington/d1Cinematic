@@ -135,33 +135,45 @@ playUukiAtemyFlask() {
         showTitleMenu() {
             const w = this.scale.width;
             const h = this.scale.height;
+            const flask = this.add.image(w + 500, h / 2, 'flask')
+            .setScale(0.6)
 
-            const title = this.add.text(-500, h * 0.25, 'FLASK FINDOR', {
-                fontFamily: 'Arial',
+            const title = this.add.text(-500, h * 0.22, 'FLASK\nFINDERS', {
+                fontFamily: 'Times New Roman',
                 fontSize: '72px',
                 color: '#ffffff',
-                fontStyle: 'bold'
+                fontStyle: 'bold',
+                align: 'left'
             }).setOrigin(0.5);
 
-            const menuText = this.add.text(w / 2, h + 200, 'Continue\nNew Game\nOptions', {
-                fontFamily: 'Arial',
+            const menuText = this.add.text(-500, h * 0.63, 'Continue\n\nNew Game\n\nOptions\n\nAdditonal Content\n\nControls', {
+                fontFamily: 'Times New Roman',
                 fontSize: '36px',
                 color: '#ffffff',
-                align: 'center'
+                align: 'left'
             }).setOrigin(0.5);
 
             this.tweens.add({
                 targets: title,
-                x: w / 2,
+                x: w * 0.2,
                 duration: 1000,
                 ease: 'Sine.easeOut',
                 onComplete: () => {
                     this.tweens.add({
                         targets: menuText,
-                        y: h * 0.55,
-                        duration: 800,
-                        ease: 'Sine.easeOut'
+                        x: w * 0.25,
+                        duration: 1000,
+                        ease: 'Sine.easeOut',
+                        onComplete: () => {
+                            this.tweens.add({
+                                targets: flask,
+                                x: w * 0.7,
+                                duration: 2000,
+                                ease: 'Sine.easeOut',
+                            });
+                        }
                     });
+
                 }
             });
         }
