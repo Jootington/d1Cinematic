@@ -69,6 +69,10 @@ export class Start extends Phaser.Scene {
                             onComplete: () => {
                                 this.time.delayedCall(2500, () => {
                                     this.cameras.main.fadeOut(1000, 0, 0, 0);
+
+                                    this.cameras.main.once('camerafadeoutcomplete', () => {
+                                        this.scene.start('IntroScene');
+                                    });
                                 });
                             }
                         });

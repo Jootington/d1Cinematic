@@ -1,5 +1,5 @@
 import { Start } from './scenes/Start.js';
-
+import { IntroScene } from './scenes/IntroScene.js';
 const config = {
     type: Phaser.AUTO,
     title: 'Overlord Rising',
@@ -11,6 +11,7 @@ const config = {
     pixelArt: false,
     scene: [
         Start,
+        IntroScene,
     ],
     scale: {
         mode: Phaser.Scale.FIT,
